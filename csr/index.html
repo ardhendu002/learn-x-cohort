@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind v3 Test</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script> <!-- ✅ Important -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&  family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav class="p-3 flex bg-gray-400 justify-between items-center">
+    <!-- Logo -->
+    <a id="logo" href="#" class="flex gap-2 items-center">
+      <img src="../resources/pngimg.com - coin_PNG36871.png" alt="logo" class="w-8 h-8 transition-transform duration-300 hover:scale-150">
+      <span class="text-gray-800 font-bold hover:text-slate-300">LEARN X COHORT</span>
+    </a>
+
+    <!-- Nav Menu -->
+    <div id="navmenu" class="hidden md:flex gap-12 mr-6">
+      <a class="font-poppins hover:text-gray-300" href="#">Cohort</a>
+      <a class="font-poppins hover:text-gray-300" href="#">Youtube</a>
+      <a class="font-poppins hover:text-gray-300" href="#">Offers</a>
+      <a class="font-poppins hover:text-gray-300" href="#">Contact us</a>
+    </div>
+      <button class="p-2 md:hidden" onclick="handlemenu()">
+        <i class="fa-solid fa-bars text-gray-800">
+        </i>
+      </button>
+      <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3">
+        <div class="flex items-center justify-between">
+          <a id="logo" href="#" class="flex gap-2 items-center">
+            <img src="../resources/pngimg.com - coin_PNG36871.png" alt="logo" class="w-8 h-8 transition-transform duration-300 hover:scale-150">
+            <span class="text-gray-800 font-bold hover:text-gray-300">LEARN X COHORT</span>
+          </a>
+          <button class="p-2 md:hidden" onclick="handlemenu()">
+              <i class="fa-solid fa-xmark text-gray-800 hover:text-gray-300"></i>
+          </button>
+        </div>
+        <div class="mt-10">
+          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Cohort</a>
+          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Youtube</a>
+          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Offers</a>
+          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Contact us</a>
+        </div>
+      </div>
+    </nav>
+    <!--main section-->
+    <div id="hero" class="bg-gradient-to-b from-gray-900 via-gray-400 to-transparent flex flex-col items-center justify-center">
+      <div id="heading1" class="min-h-screen flex flex-col justify-center items-center text-4xl sm:5xl md:5xl lg:text-7xl text-center font-gothic mt-10">
+        <div id="hero-container" class="w-full max-w-6xl mx-auto p-0 flex-col justify-center items-center text-white transition-all duration-500 ease-in-out 
+         hover:text-transparent hover:bg-gradient-to-t 
+         hover:from-gray-700 hover:to-gray-300 bg-clip-text cursor-pointer">
+            <div id="heading1" class="flex justify-center items-center text-4xl sm:5xl md:5xl lg:text-7xl text-center font-gothic ">
+              CREATE YOUR DREAM
+            </div>
+            <div class="flex justify-center items-center sm:5xl md:5xl lg:text-7xl text-center font-gothic">
+              WEB
+            </div>
+        </div>
+        <div id="heading2" class="flex justify-center gap-10 mt-6 text-white ">
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800 bg-clip-text" href="#">
+            COHORTS
+          </a>
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#">
+            REVIEWS
+          </a>
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#">
+            ACHIEVEMENTS
+          </a>
+        </div>
+      </div>
+      <div id="tools-sections" class="w-full flex flex-col">
+        <div class="text-center text-gray-700 text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
+        Tools we teach
+        </div>
+        <div id="tools-lines" class="flex flex-col gap-8 w-full overflow-hidden whitespace-nowrap">
+          <div id="line1" class="flex gap-9 justify-center w-screen">
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/react.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                REACT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+          </div>
+          <div id="line2" class="flex gap-9 justify-center w-screen translate-x-20">
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/react.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                REACT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/typescript.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/php.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PHP
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/swift.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                SWIFT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/typescript.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                TYPESCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+          </div>
+          <div id="line3" class="flex gap-9 justify-center w-screen">
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/php.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PHP
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/swift.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                SWIFT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/react.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                REACT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+          </div>
+          <div id="line4" class="hidden md:flex gap-9 justify-center w-screen">
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/react.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                REACT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/python.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                PYTHON
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/java.png" class="w-14 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/c++.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                C++
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/js.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                JAVA-SCRIPT
+              </span>
+            </div>
+            <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-transparent rounded-xl border border-gray-300">
+              <img src="../resources/mysql.png" class="w-12 h-12 md:w-16 md:h-16"><img>
+              <span class="text-[12px] md:text-[10px] font-roboto">
+                MYSQL
+              </span>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div id="cohorts" class="min-h-screen px-4 py-8 bg-white flex flex-col justify-center bg-gradient-to-b from-white via-gray-400 to-white">
+      <h1 class="text-center text-5xl block mt-20 mb-10 font-gothic md:text-7xl text-gray-600 transition-all ease-in-out hover:text-transparent hover:bg-gradient-to-t hover:from-white hover:to-gray-700 bg-clip-text cursor-pointer">
+        COHORTS
+      </h1>
+      <p class="text-center text-xl block mb-10 font-grotesk">Our cohorts provide top quality video lectures and mentored by industry experts to prepare you for best tech minds of India so Join out cohorts now.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-15 max-w-7xl mx-auto">
+
+    <!-- Card 1 -->
+    <a href="https://example.com/cohort2" class="block bg-white rounded-xl shadow-md overflow-hidden p-4 hover:shadow-lg transition-all duration-300 ease-in-out hover:bg-gradient-to-t hover:from-gray-700 hover:to-gray-300 hover:text-white hover:transition-transform hover:duration-300 hover:scale-110">
+      <img src="../resources/cohort1.0.png" alt="Cohort 1" class="w-full h-auto rounded-lg ">
+      <p class="mt-4 text-sm sm:text-base md:text-sm lg:text-base text-center font-poppins">
+        Basic to advance web dev with cohort-1.0
+      </p>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="https://example.com/cohort1" class="block bg-white rounded-xl shadow-md overflow-hidden p-4 hover:shadow-lg transition-all duration-300 hover:bg-gradient-to-t hover:from-gray-700 hover:to-gray-300 hover:text-white hover:transition-transform hover:duration-300 hover:scale-110">
+      <img src="../resources/cohort2.0.png" alt="Cohort 2" class="w-full h-auto rounded-lg">
+      <p class="mt-4 text-sm sm:text-base md:text-sm lg:text-base text-center font-poppins">
+        Excel web dev skills with modern tools in cohort-2.0
+      </p>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="https://example.com/cohort3" class="block bg-white rounded-xl shadow-md overflow-hidden p-4 hover:shadow-lg transition-all duration-300 hover:bg-gradient-to-t hover:from-gray-700 hover:to-gray-300 hover:text-white hover:transition-transform hover:duration-300 hover:scale-110">
+      <img src="../resources/cohort3.0.png" alt="Cohort 3" class="w-full h-auto rounded-lg">
+      <p class="mt-4 text-sm sm:text-base md:text-sm lg:text-base text-center font-poppins">
+        Learn React, TypeScript & Build Real-Life Projects with cohort-3.0
+      </p>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="https://example.com/cohort4" class="block bg-white rounded-xl shadow-md overflow-hidden p-4 hover:shadow-lg transition-all duration-300 hover:bg-gradient-to-t hover:from-gray-700 hover:to-gray-300 hover:text-white hover:transition-transform hover:duration-300 hover:scale-110">
+      <img src="../resources/cohort4.0.png" alt="Cohort 4" class="w-full h-auto rounded-lg">
+      <p class="mt-4 text-sm sm:text-base md:text-sm lg:text-base text-center font-poppins">
+        Master Full Stack Skills in Cohort-4.0
+      </p>
+    </a>
+  </div>
+    </div>
+    <div id="REVIEWS"class="min-h-screen px-4 py-10 flex flex-col justify-center bg-gradient-to-b from-white via-gray-400 to-white">
+      <h1 class="block text-center p-5 mt-10 mb-20 text-5xl md:text-7xl font-gothic text-gray-600 transition-all ease-in-out hover:text-transparent hover:bg-gradient-to-t hover:from-white hover:to-gray-700 bg-clip-text cursor-pointer">REVIEWS</h1>
+      <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-1 md:gird-cols-2 lg:grid-cols-3 gap-8 md:gap-15 max-w-7xl mx-auto">
+        <div id="container-1" class="p-4 relative rounded-xl justify-center group overflow-hidden bg-white transition-all transition-scale hover:duration-150 hover:scale-105">
+          <img src="../resources/person-1.png" alt="person-1" class="block w-full h-auto rounded-lg"/>
+          <p class="block text-center mt-10 text-3xl font-gothic font-bold p-5">Person-1</p>
+          <div class="absolute bottom-0 left-0 w-full bg-slate-200 p-4 rounded-t-xl 
+                translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 
+                transition-all duration-500 ease-in-out font-grotesk">
+            <h1 class="text-xl md:text-2xl">Person-1</h1>
+            <p>I really want to thank learnxcohort to create these amazing cohorts which  helped me to crack my first development job and the teachers are really  supportive and very skilled in teaching and development.</p>
+            </div>
+        </div>
+        <div id="container-2" class="p-4 relative rounded-xl justify-center group overflow-hidden bg-white transition-all transition-scale hover:duration-150 hover:scale-105">
+          <p class="block text-center mt-10 text-3xl font-gothic font-bold p-5">Person-2</p>
+          <img src="../resources/person-2.png" class="block w-full h-auto rounded-lg"/>
+          <div class="absolute bottom-0 left-0 w-full bg-slate-200 p-4 rounded-xl translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out font-grotesk">
+          <h1 class="text-xl md:text-2xl">Person-2</h1>
+          <p>I really want to thank learnxcohort to create these amazing cohorts which helped me to crack my first development job and the teachers are really supportive and very skilled in teaching and development.</p>
+          </div>
+        </div>
+        <div id="container-3" class="p-4 relative rounded-xl justify-center group overflow-hidden bg-white transition-all transition-scale hover:duration-150 hover:scale-105 flex-col">
+          
+          <img src="../resources/person-3.png" class="block w-full h-auto rounded-lg"/>
+          <div class="absolute bottom-0 left-0 w-full bg-slate-200 p-4 rounded-xl translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out font-grotesk">
+          <h1 class="text-xl md:text-2xl">Person-3</h1>
+          <p>I really want to thank learnxcohort to create these amazing cohorts which helped me to crack my first development job and the teachers are really supportive and very skilled in teaching and development.</p>
+          
+          </div>
+          <p class="block text-center mt-10 text-3xl font-gothic font-bold p-5">Person-3</p>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

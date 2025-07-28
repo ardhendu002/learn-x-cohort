@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Special+Gothic+Expanded+One&display=swap');
+@font-face {
+  font-family: 'SpecialGothicExpandedOne';
+  src: url('../resources/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('../resources/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+@layer utilities {
+  .hover-gradient-text {
+    @apply text-transparent bg-clip-text transition-all duration-500 ease-in-out;
+    background-image: radial-gradient(circle, #ffffff 0%, #000000 80%);
+  }
+
+  .text-steel {
+    color: #616569;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
