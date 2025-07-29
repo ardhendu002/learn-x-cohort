@@ -44,3 +44,23 @@ setupIntersectionObserver(line1, true, 0.15);
 setupIntersectionObserver(line2, false, 0.15);
 setupIntersectionObserver(line3, true, 0.15);
 setupIntersectionObserver(line4, false,0.15);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-12');
+      }else{
+      entry.target.classList.remove('opacity-100', 'translate-y-0');
+        entry.target.classList.add('opacity-0', 'translate-y-12');
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+
