@@ -1,14 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "csr/index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/csr/index.html"
-    }
-  ]
+  "outputDirectory": "csr"
 }
