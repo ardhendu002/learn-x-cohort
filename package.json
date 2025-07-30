@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./csr/style1.css -o ./csr/dist/output.css --watch"
+    "build": "mkdir -p ./csr/dist && tailwindcss -i ./csr/style1.css -o ./csr/dist/output.css"
   },
   "keywords": [],
   "author": "",
