@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind v3 Test</title>
+  <title>learnxcohort</title>
   <link href="./dist/output.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script> <!-- ✅ Important -->
   <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
@@ -14,47 +14,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&  family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style1.css">
 </head>
-<body>
+<body class="bg-gradient-to-b from-gray-800 via-white to-white scroll-smooth">
     <!--navbar-->
-    <nav class="p-3 flex bg-gray-400 justify-between items-center">
+    <nav class="flex justify-between items-center px-6 sticky top-0 z-50 bg-white/10 backdrop-blur-md mt-4 mx-10 py-3 shadow-lg rounded-full">
     <!-- Logo -->
     <a id="logo" href="#" class="flex gap-2 items-center">
       <img src="../resources/pngimg.com - coin_PNG36871.png" alt="logo" class="w-8 h-8 transition-transform duration-300 hover:scale-150">
-      <span class="text-gray-800 font-bold hover:text-slate-300">LEARN X COHORT</span>
+      <span class="text-gray-50 font-grotesk hover:text-slate-300">LEARN X COHORT</span>
     </a>
 
     <!-- Nav Menu -->
-    <div id="navmenu" class="hidden md:flex gap-12 mr-6">
-      <a class="font-poppins hover:text-gray-300" href="#">Cohort</a>
-      <a class="font-poppins hover:text-gray-300" href="#">Youtube</a>
-      <a class="font-poppins hover:text-gray-300" href="#">Achievements</a>
-      <a class="font-poppins hover:text-gray-300" href="#">Reviews</a>
+    <div id="navmenu" class="hidden md:flex gap-20 mr-6">
+      <a class="font-poppins text-gray-300 hover:text-gray-400" href="#cohorts">Cohort</a>
+      <a class="font-poppins text-gray-300 hover:text-gray-400" href="#Youtube">Youtube</a>
+      <a class="font-poppins text-gray-300 hover:text-gray-400" href="#ACHIEVEMENTS">Achievements</a>
+      <a class="font-poppins text-gray-300 hover:text-gray-400" href="#REVIEWS">Reviews</a>
     </div>
       <button class="p-2 md:hidden" onclick="handlemenu()">
-        <i class="fa-solid fa-bars text-gray-800">
+        <i class="fa-solid fa-bars text-white">
         </i>
       </button>
-      <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3">
+      <div id="nav-dialog" class="hidden fixed bg-white rounded-full inset-0 p-6 pt-3 px=1">
         <div class="flex items-center justify-between">
           <a id="logo" href="#" class="flex gap-2 items-center">
             <img src="../resources/pngimg.com - coin_PNG36871.png" alt="logo" class="w-8 h-8 transition-transform duration-300 hover:scale-150">
-            <span class="text-gray-800 font-bold hover:text-gray-300">LEARN X COHORT</span>
+            <span class="text-black font-grotesk hover:text-gray-800">LEARN X COHORT</span>
           </a>
           <button class="p-2 md:hidden" onclick="handlemenu()">
-              <i class="fa-solid fa-xmark text-gray-800 hover:text-gray-300"></i>
+              <i class="fa-solid fa-xmark hover:text-gray-500 black"></i>
           </button>
         </div>
-        <div class="mt-10">
-          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Cohort</a>
-          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Youtube</a>
-          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Achievements</a>
-          <a href="#" class="font-poppins p-3 font-semibold hover:bg-slate-300 block rounded-lg">Reviews</a>
+        <div class="mt-10 text-black bg-white rounded-xl">
+          <a href="#cohorts" class="font-poppins p-3 font-semibold hover:bg-slate-700 block rounded-lg">Cohort</a>
+          <a href="#Youtube" class="font-poppins p-3 font-semibold hover:bg-slate-700 block rounded-lg">Youtube</a>
+          <a href="#ACHIEVEMENTS" class="font-poppins p-3 font-semibold hover:bg-slate-700 block rounded-lg">Achievements</a>
+          <a href="#REVIEWS" class="font-poppins p-3 font-semibold hover:bg-slate-700 block rounded-lg">Reviews</a>
         </div>
-      </div>
     </nav>
     <!--main section-->
-    <div id="hero" class="bg-gradient-to-b from-gray-900 via-gray-400 to-transparent flex flex-col items-center justify-center">
-      <div id="heading1" class="min-h-screen flex flex-col justify-center items-center text-4xl sm:5xl md:5xl lg:text-7xl text-center font-gothic mt-10">
+    <div id="hero" class="min-h-screen bg-cover bg-center bg-no-repeat relative z-0 flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 via-gray-400 to-transparent">
+      <div id="heading1" class="min-h-screen flex flex-col justify-center items-center text-4xl sm:5xl md:5xl lg:text-7xl text-center font-gothic ">
         <div id="hero-container" class="w-full max-w-6xl mx-auto p-0 flex-col justify-center items-center text-white transition-all duration-500 ease-in-out 
          hover:text-transparent hover:bg-gradient-to-t 
          hover:from-gray-700 hover:to-gray-300 bg-clip-text cursor-pointer">
@@ -66,18 +65,18 @@
             </div>
         </div>
         <div id="heading2" class="flex justify-center gap-10 mt-6 text-white ">
-          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800 bg-clip-text" href="#">
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800 bg-clip-text" href="#cohorts">
             COHORTS
           </a>
-          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#">
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#REVIEWS">
             REVIEWS
           </a>
-          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#">
+          <a class="text-base sm:text-lg md:text-xl lg:text-2xl text-center font-semibold font-poppins transition-all duration-500 ease-in-out hover:text-gray-800" href="#ACHIEVEMENTS">
             ACHIEVEMENTS
           </a>
         </div>
       </div>
-      <div id="tools-sections" class="w-full flex flex-col">
+      <div id="tools-sections" class="bg-gradient-to-b from-transparent to-white w-full flex flex-col">
         <div class="text-center text-gray-700 text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
         Tools we teach
         </div>
@@ -478,7 +477,7 @@
         </div>
       </div>
     </div>
-    <div id="ACHIEVEMENTS" class="min-h-screen flex items-center flex-col mt-36 md:mt-20 gap-y-44 md:gap-y-20">
+    <div id="ACHIEVEMENTS" class="min-h-screen flex items-center flex-col mt-36 md:mt-20 gap-y-44 md:gap-y-20 bg-white">
       <h1 class="text-5xl md:text-7xl font-gothic text-gray-600 transition-all ease-in-out hover:text-transparent hover:bg-gradient-to-t hover:from-white hover:to-gray-700 bg-clip-text cursor-pointer  duration-1000 opacity-0 translate-y-12 reveal">ACHIEVEMENTS</h1>
       <div id="container-4" class="relative flex flex-col md:flex-row justify-center items-center md:items-start w-full max-w-7xl px-4 gap-y-32 md:gap-x-36">
         <div id="ac-1" class="flex w-3/4 md:w-2/5 bg-gray-600 p-4 rounded-2xl flex-row md:items-center transition-all duration-1000 ease-in-out opacity-0 translate-y-12 reveal">
@@ -532,17 +531,44 @@
         <a href="https://youtu.be/dQw4w9WgXcQ?si=-hTQ7V6guwqH0syo" class="block bg-gray-900 text-white p-4 rounded-2xl transition-all ease-in-out duration-200 hover:bg-gray-400 pl-20 pr-20">visit us on yt</a>
       </div>
     </div>
-    <div id="end-bar" class="flex bg-gray-900">
-      <div id="sub-point-1" class="flex flex-col mt-4 p-4 pl-6 gap-3">
+    <div id="end-bar" class="flex bg-gray-900 flex-col md:flex-row md:gap-">
+      <div id="sub-point-1" class="flex flex-col mt-4 p-4 pl-6 gap-3 md:mt-7">
         <div class="flex gap-4 items-center">
           <img src="../resources/pngimg.com - coin_PNG36871.png" class="w-8 h-8 md:w-8 md:h-8 transition-transform ease-in-out duration-200 hover:scale-110"/>
           <h1 class="font-grotesk text-white text-lg transition-transform ease-in-out duration-200 hover:scale-110 hover:text-gray-500 md:text-xl">LEARN X COHORT</h1>
         </div>
         <p class="font-poppins font-extralight text-gray-500 ">Hub of learners</p>
-        <div id="connections">
-            
+        <div id="connections" class="flex flex-row gap-4">
+          <a href="https://github.com/ardhendu002/learn-x-cohort.git">
+            <i class="fa-brands fa-github text-2xl text-gray-500 transition-all ease-in-out duration-200 hover:text-white" href="https://github.com/ardhendu002/learn-x-cohort.git"></i>
+          </a>
+          <a href="https://www.instagram.com/triggylier/">
+            <i class="fa-brands fa-instagram text-2xl text-gray-500 transition-all ease-in-out duration-200 hover:text-white"></i>
+          </a>
+          <a href="https://youtu.be/dQw4w9WgXcQ?si=VijBmCgNOf7bJOjY">
+            <i class="fa-brands fa-youtube text-2xl text-gray-500 transition-all ease-in-out duration-200 hover:text-white"></i>
+          </a>
         </div>
       </div>
+      <div class="flex ">
+      <div id="sub-point-2" class="p-4 pl-6 flex flex-col gap-3 md:mt-7 md:p-4 md:ml-96">
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">learn more</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">contact us</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">Free API</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">youtube</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">visit us</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">report</a>
+      </div>
+      <div id="sub-point-3" class="p-4 pl-6 flex flex-col gap-3 md:mt-7 md:p-4 md:ml-80">
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">buy us cookies</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">copyrights</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">Achievements</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">reviws</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">cohorts</a>
+        <a href="#" class="font-poppins text-gray-500 transition-all ease-in-out duration-200 hover:text-white text-sm">offers</a>
+      </div>
+      </div>
+    </div>
     </div>
 </body>
 <script src="script.js"></script>
